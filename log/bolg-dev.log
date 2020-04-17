@@ -354,3 +354,397 @@
 2020-04-17 16:53:07.366  INFO 5716 --- [http-nio-8080-exec-5] com.dsy.blog.service.TagService          : 从redis中查找到由标签显示博客的数据：[TagTops(tagId=22, name=Java, BlogNumber=4), TagTops(tagId=24, name=测试, BlogNumber=3), TagTops(tagId=21, name=Redis, BlogNumber=3), TagTops(tagId=1, name=Spring, BlogNumber=2), TagTops(tagId=23, name=MySQL, BlogNumber=1), TagTops(tagId=20, name=设计模式, BlogNumber=1), TagTops(tagId=2, name=Mybatis, BlogNumber=1)]
 2020-04-17 16:53:07.482  INFO 5716 --- [http-nio-8080-exec-5] com.dsy.blog.service.BlogService         : 从redis中获取最新博客
 2020-04-17 16:53:07.900  INFO 5716 --- [http-nio-8080-exec-7] com.dsy.blog.service.BlogService         : 从redis中获取最新博客
+2020-04-17 17:49:44.620  INFO 5876 --- [restartedMain] com.dsy.blog.BlogApplication             : Starting BlogApplication on VictorLi with PID 5876 (F:\IdeaProjects\blog\target\classes started by li in F:\IdeaProjects\blog)
+2020-04-17 17:49:44.623 DEBUG 5876 --- [restartedMain] com.dsy.blog.BlogApplication             : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-17 17:49:44.624  INFO 5876 --- [restartedMain] com.dsy.blog.BlogApplication             : The following profiles are active: dev
+2020-04-17 17:49:44.688  INFO 5876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-17 17:49:44.689  INFO 5876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-17 17:49:45.425  INFO 5876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-04-17 17:49:45.427  INFO 5876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-04-17 17:49:45.457  INFO 5876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
+2020-04-17 17:49:45.573  WARN 5876 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.dsy.blog]' package. Please check your configuration.
+2020-04-17 17:49:46.230  INFO 5876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-04-17 17:49:46.238  INFO 5876 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-17 17:49:46.239  INFO 5876 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-17 17:49:46.241  INFO 5876 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-04-17 17:49:46.241  INFO 5876 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-04-17 17:49:46.241  INFO 5876 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-04-17 17:49:46.244  INFO 5876 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-04-17 17:49:46.370  INFO 5876 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-17 17:49:46.370  INFO 5876 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1681 ms
+2020-04-17 17:49:46.424  INFO 5876 --- [restartedMain] o.s.boot.web.servlet.RegistrationBean    : Filter webStatFilter was not registered (possibly already registered?)
+2020-04-17 17:49:47.744  INFO 5876 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-17 17:49:47.843  INFO 5876 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-17 17:49:48.351  INFO 5876 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-17 17:49:48.398  INFO 5876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-17 17:49:48.401  INFO 5876 --- [restartedMain] com.dsy.blog.BlogApplication             : Started BlogApplication in 4.265 seconds (JVM running for 5.344)
+2020-04-17 17:49:48.447  INFO 5876 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-17 17:49:48.860 DEBUG 5876 --- [restartedMain] c.d.blog.mapper.BlogMapper.findBlogAll   : ==>  Preparing: select * from blog order by update_time desc 
+2020-04-17 17:49:48.881 DEBUG 5876 --- [restartedMain] c.d.blog.mapper.BlogMapper.findBlogAll   : ==> Parameters: 
+2020-04-17 17:49:48.912 DEBUG 5876 --- [restartedMain] c.d.b.mapper.TypeMapper.selectTypeById   : ====>  Preparing: select * from type where type_id = ? 
+2020-04-17 17:49:48.913 DEBUG 5876 --- [restartedMain] c.d.b.mapper.TypeMapper.selectTypeById   : ====> Parameters: 7(String)
+2020-04-17 17:49:48.915 DEBUG 5876 --- [restartedMain] c.d.b.mapper.TypeMapper.selectTypeById   : <====      Total: 1
+2020-04-17 17:49:48.917 DEBUG 5876 --- [restartedMain] c.d.b.m.UserMapper.selectUserByUserId    : ====>  Preparing: select * from user where user_id = ? 
+2020-04-17 17:49:48.918 DEBUG 5876 --- [restartedMain] c.d.b.m.UserMapper.selectUserByUserId    : ====> Parameters: 1(String)
+2020-04-17 17:49:48.920 DEBUG 5876 --- [restartedMain] c.d.b.m.UserMapper.selectUserByUserId    : <====      Total: 1
+2020-04-17 17:49:48.921 DEBUG 5876 --- [restartedMain] c.d.b.mapper.TypeMapper.selectTypeById   : ====>  Preparing: select * from type where type_id = ? 
+2020-04-17 17:49:48.921 DEBUG 5876 --- [restartedMain] c.d.b.mapper.TypeMapper.selectTypeById   : ====> Parameters: 4(String)
+2020-04-17 17:49:48.922 DEBUG 5876 --- [restartedMain] c.d.b.mapper.TypeMapper.selectTypeById   : <====      Total: 1
+2020-04-17 17:49:48.923 DEBUG 5876 --- [restartedMain] c.d.b.mapper.TypeMapper.selectTypeById   : ====>  Preparing: select * from type where type_id = ? 
+2020-04-17 17:49:48.923 DEBUG 5876 --- [restartedMain] c.d.b.mapper.TypeMapper.selectTypeById   : ====> Parameters: 10(String)
+2020-04-17 17:49:48.924 DEBUG 5876 --- [restartedMain] c.d.b.mapper.TypeMapper.selectTypeById   : <====      Total: 1
+2020-04-17 17:49:48.926 DEBUG 5876 --- [restartedMain] c.d.b.mapper.TypeMapper.selectTypeById   : ====>  Preparing: select * from type where type_id = ? 
+2020-04-17 17:49:48.926 DEBUG 5876 --- [restartedMain] c.d.b.mapper.TypeMapper.selectTypeById   : ====> Parameters: 6(String)
+2020-04-17 17:49:48.928 DEBUG 5876 --- [restartedMain] c.d.b.mapper.TypeMapper.selectTypeById   : <====      Total: 1
+2020-04-17 17:49:48.932 DEBUG 5876 --- [restartedMain] c.d.blog.mapper.BlogMapper.findBlogAll   : <==      Total: 9
+2020-04-17 17:49:49.056  INFO 5876 --- [restartedMain] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-04-17 17:49:49.057  INFO 5876 --- [restartedMain] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-04-17 17:49:49.493  INFO 5876 --- [restartedMain] com.dsy.blog.config.StartupRunner        : 将blog数据添加到redis的AllBlog中，其博客标题为：欢迎使用 Markdown在线编辑器 MdEditor
+2020-04-17 17:49:49.533  INFO 5876 --- [restartedMain] com.dsy.blog.config.StartupRunner        : 将blog数据添加到redis的AllBlog中，其博客标题为：随笔
+2020-04-17 17:49:49.574  INFO 5876 --- [restartedMain] com.dsy.blog.config.StartupRunner        : 将blog数据添加到redis的AllBlog中，其博客标题为：MarkDown标题示例
+2020-04-17 17:49:49.620  INFO 5876 --- [restartedMain] com.dsy.blog.config.StartupRunner        : 将blog数据添加到redis的AllBlog中，其博客标题为：Java中 equals() 和 hashCode()的关系
+2020-04-17 17:49:49.661  INFO 5876 --- [restartedMain] com.dsy.blog.config.StartupRunner        : 将blog数据添加到redis的AllBlog中，其博客标题为：Java常见关键字final、static、super、abstract、this
+2020-04-17 17:49:49.702  INFO 5876 --- [restartedMain] com.dsy.blog.config.StartupRunner        : 将blog数据添加到redis的AllBlog中，其博客标题为：redis学习笔记（二）：Hash
+2020-04-17 17:49:49.744  INFO 5876 --- [restartedMain] com.dsy.blog.config.StartupRunner        : 将blog数据添加到redis的AllBlog中，其博客标题为：redis学习笔记（一）：String
+2020-04-17 17:49:49.783  INFO 5876 --- [restartedMain] com.dsy.blog.config.StartupRunner        : 将blog数据添加到redis的AllBlog中，其博客标题为：Java合并两个int数组
+2020-04-17 17:49:49.825  INFO 5876 --- [restartedMain] com.dsy.blog.config.StartupRunner        : 将blog数据添加到redis的AllBlog中，其博客标题为：条件注解@Conditional
+2020-04-17 17:49:49.867  INFO 5876 --- [restartedMain] com.dsy.blog.config.StartupRunner        : 初始化redis中blogCount的数量为：9
+2020-04-17 17:50:37.660  INFO 5876 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-17 17:50:37.660  INFO 5876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-17 17:50:37.676  INFO 5876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-04-17 17:50:37.728 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.b.m.BlogMapper.findBlogAll_COUNT     : ==>  Preparing: SELECT count(0) FROM blog 
+2020-04-17 17:50:37.728 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.b.m.BlogMapper.findBlogAll_COUNT     : ==> Parameters: 
+2020-04-17 17:50:37.730 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.b.m.BlogMapper.findBlogAll_COUNT     : <==      Total: 1
+2020-04-17 17:50:37.731 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.blog.mapper.BlogMapper.findBlogAll   : ==>  Preparing: select * from blog order by update_time desc LIMIT ? 
+2020-04-17 17:50:37.732 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.blog.mapper.BlogMapper.findBlogAll   : ==> Parameters: 5(Integer)
+2020-04-17 17:50:37.735 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.b.mapper.TypeMapper.selectTypeById   : ====>  Preparing: select * from type where type_id = ? 
+2020-04-17 17:50:37.736 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.b.mapper.TypeMapper.selectTypeById   : ====> Parameters: 7(String)
+2020-04-17 17:50:37.737 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.b.mapper.TypeMapper.selectTypeById   : <====      Total: 1
+2020-04-17 17:50:37.737 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.b.m.UserMapper.selectUserByUserId    : ====>  Preparing: select * from user where user_id = ? 
+2020-04-17 17:50:37.737 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.b.m.UserMapper.selectUserByUserId    : ====> Parameters: 1(String)
+2020-04-17 17:50:37.739 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.b.m.UserMapper.selectUserByUserId    : <====      Total: 1
+2020-04-17 17:50:37.739 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.b.mapper.TypeMapper.selectTypeById   : ====>  Preparing: select * from type where type_id = ? 
+2020-04-17 17:50:37.739 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.b.mapper.TypeMapper.selectTypeById   : ====> Parameters: 4(String)
+2020-04-17 17:50:37.740 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.b.mapper.TypeMapper.selectTypeById   : <====      Total: 1
+2020-04-17 17:50:37.741 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.b.mapper.TypeMapper.selectTypeById   : ====>  Preparing: select * from type where type_id = ? 
+2020-04-17 17:50:37.741 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.b.mapper.TypeMapper.selectTypeById   : ====> Parameters: 10(String)
+2020-04-17 17:50:37.742 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.b.mapper.TypeMapper.selectTypeById   : <====      Total: 1
+2020-04-17 17:50:37.743 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.b.mapper.TypeMapper.selectTypeById   : ====>  Preparing: select * from type where type_id = ? 
+2020-04-17 17:50:37.743 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.b.mapper.TypeMapper.selectTypeById   : ====> Parameters: 6(String)
+2020-04-17 17:50:37.744 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.b.mapper.TypeMapper.selectTypeById   : <====      Total: 1
+2020-04-17 17:50:37.744 DEBUG 5876 --- [http-nio-8080-exec-1] c.d.blog.mapper.BlogMapper.findBlogAll   : <==      Total: 5
+2020-04-17 17:50:38.011  INFO 5876 --- [http-nio-8080-exec-1] com.dsy.blog.service.TagService          : 从redis中获取数据：[TagTops(tagId=1, name=Spring, BlogNumber=2), TagTops(tagId=22, name=Java, BlogNumber=4), TagTops(tagId=24, name=测试, BlogNumber=3), TagTops(tagId=23, name=MySQL, BlogNumber=1), TagTops(tagId=20, name=设计模式, BlogNumber=1), TagTops(tagId=2, name=Mybatis, BlogNumber=1), TagTops(tagId=21, name=Redis, BlogNumber=3)]
+2020-04-17 17:50:38.012  INFO 5876 --- [http-nio-8080-exec-1] com.dsy.blog.service.TagService          : 从redis中查找到由标签显示博客的数据：[TagTops(tagId=22, name=Java, BlogNumber=4), TagTops(tagId=24, name=测试, BlogNumber=3), TagTops(tagId=21, name=Redis, BlogNumber=3), TagTops(tagId=1, name=Spring, BlogNumber=2), TagTops(tagId=23, name=MySQL, BlogNumber=1), TagTops(tagId=20, name=设计模式, BlogNumber=1), TagTops(tagId=2, name=Mybatis, BlogNumber=1)]
+2020-04-17 17:50:38.162  INFO 5876 --- [http-nio-8080-exec-1] com.dsy.blog.service.BlogService         : 从redis中获取最新博客
+2020-04-17 17:50:39.134  INFO 5876 --- [http-nio-8080-exec-2] com.dsy.blog.service.BlogService         : 从redis中获取最新博客
+2020-04-17 17:50:43.721 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.blog.mapper.TypeMapper.selectCount   : ==>  Preparing: SELECT COUNT(type_id) FROM type 
+2020-04-17 17:50:43.721 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.blog.mapper.TypeMapper.selectCount   : ==> Parameters: 
+2020-04-17 17:50:43.723 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.blog.mapper.TypeMapper.selectCount   : <==      Total: 1
+2020-04-17 17:50:43.768 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.B.selectBlogByTypeId_COUNT       : ==>  Preparing: SELECT count(0) FROM blog WHERE type_id = ? 
+2020-04-17 17:50:43.768 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.B.selectBlogByTypeId_COUNT       : ==> Parameters: 6(Integer)
+2020-04-17 17:50:43.770 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.B.selectBlogByTypeId_COUNT       : <==      Total: 1
+2020-04-17 17:50:43.770 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.BlogMapper.selectBlogByTypeId    : ==>  Preparing: select * from blog where type_id = ? LIMIT ? 
+2020-04-17 17:50:43.771 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.BlogMapper.selectBlogByTypeId    : ==> Parameters: 6(Integer), 5(Integer)
+2020-04-17 17:50:43.774 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.mapper.TypeMapper.selectTypeById   : ====>  Preparing: select * from type where type_id = ? 
+2020-04-17 17:50:43.775 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.mapper.TypeMapper.selectTypeById   : ====> Parameters: 6(String)
+2020-04-17 17:50:43.776 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.mapper.TypeMapper.selectTypeById   : <====      Total: 1
+2020-04-17 17:50:43.778 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.UserMapper.selectUserByUserId    : ====>  Preparing: select * from user where user_id = ? 
+2020-04-17 17:50:43.778 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.UserMapper.selectUserByUserId    : ====> Parameters: 1(String)
+2020-04-17 17:50:43.780 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.UserMapper.selectUserByUserId    : <====      Total: 1
+2020-04-17 17:50:43.783 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.BlogMapper.selectBlogByTypeId    : <==      Total: 5
+2020-04-17 17:50:43.801 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.BlogTagMapper.selectByExample    : ==>  Preparing: SELECT blog_tag_id,blog_id,tag_id FROM blog_tag WHERE ( ( blog_id = ? ) ) 
+2020-04-17 17:50:43.801 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.BlogTagMapper.selectByExample    : ==> Parameters: 8(Integer)
+2020-04-17 17:50:43.803 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.BlogTagMapper.selectByExample    : <==      Total: 1
+2020-04-17 17:50:43.804 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.TagMapper.selectByPrimaryKey     : ==>  Preparing: SELECT tag_id,name FROM tag WHERE tag_id = ? 
+2020-04-17 17:50:43.804 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.TagMapper.selectByPrimaryKey     : ==> Parameters: 1(Integer)
+2020-04-17 17:50:43.806 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.TagMapper.selectByPrimaryKey     : <==      Total: 1
+2020-04-17 17:50:43.808 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.BlogTagMapper.selectByExample    : ==>  Preparing: SELECT blog_tag_id,blog_id,tag_id FROM blog_tag WHERE ( ( blog_id = ? ) ) 
+2020-04-17 17:50:43.808 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.BlogTagMapper.selectByExample    : ==> Parameters: 15(Integer)
+2020-04-17 17:50:43.809 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.BlogTagMapper.selectByExample    : <==      Total: 1
+2020-04-17 17:50:43.810 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.TagMapper.selectByPrimaryKey     : ==>  Preparing: SELECT tag_id,name FROM tag WHERE tag_id = ? 
+2020-04-17 17:50:43.810 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.TagMapper.selectByPrimaryKey     : ==> Parameters: 22(Integer)
+2020-04-17 17:50:43.811 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.TagMapper.selectByPrimaryKey     : <==      Total: 1
+2020-04-17 17:50:43.812 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.BlogTagMapper.selectByExample    : ==>  Preparing: SELECT blog_tag_id,blog_id,tag_id FROM blog_tag WHERE ( ( blog_id = ? ) ) 
+2020-04-17 17:50:43.813 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.BlogTagMapper.selectByExample    : ==> Parameters: 16(Integer)
+2020-04-17 17:50:43.814 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.BlogTagMapper.selectByExample    : <==      Total: 1
+2020-04-17 17:50:43.814 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.TagMapper.selectByPrimaryKey     : ==>  Preparing: SELECT tag_id,name FROM tag WHERE tag_id = ? 
+2020-04-17 17:50:43.814 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.TagMapper.selectByPrimaryKey     : ==> Parameters: 21(Integer)
+2020-04-17 17:50:43.815 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.TagMapper.selectByPrimaryKey     : <==      Total: 1
+2020-04-17 17:50:43.816 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.BlogTagMapper.selectByExample    : ==>  Preparing: SELECT blog_tag_id,blog_id,tag_id FROM blog_tag WHERE ( ( blog_id = ? ) ) 
+2020-04-17 17:50:43.816 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.BlogTagMapper.selectByExample    : ==> Parameters: 17(Integer)
+2020-04-17 17:50:43.817 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.BlogTagMapper.selectByExample    : <==      Total: 1
+2020-04-17 17:50:43.818 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.TagMapper.selectByPrimaryKey     : ==>  Preparing: SELECT tag_id,name FROM tag WHERE tag_id = ? 
+2020-04-17 17:50:43.818 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.TagMapper.selectByPrimaryKey     : ==> Parameters: 21(Integer)
+2020-04-17 17:50:43.819 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.TagMapper.selectByPrimaryKey     : <==      Total: 1
+2020-04-17 17:50:43.820 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.BlogTagMapper.selectByExample    : ==>  Preparing: SELECT blog_tag_id,blog_id,tag_id FROM blog_tag WHERE ( ( blog_id = ? ) ) 
+2020-04-17 17:50:43.821 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.BlogTagMapper.selectByExample    : ==> Parameters: 18(Integer)
+2020-04-17 17:50:43.822 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.BlogTagMapper.selectByExample    : <==      Total: 1
+2020-04-17 17:50:43.823 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.TagMapper.selectByPrimaryKey     : ==>  Preparing: SELECT tag_id,name FROM tag WHERE tag_id = ? 
+2020-04-17 17:50:43.824 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.TagMapper.selectByPrimaryKey     : ==> Parameters: 22(Integer)
+2020-04-17 17:50:43.825 DEBUG 5876 --- [http-nio-8080-exec-3] c.d.b.m.TagMapper.selectByPrimaryKey     : <==      Total: 1
+2020-04-17 17:50:44.339  INFO 5876 --- [http-nio-8080-exec-4] com.dsy.blog.service.BlogService         : 从redis中获取最新博客
+2020-04-17 17:50:45.492  INFO 5876 --- [http-nio-8080-exec-5] com.dsy.blog.service.BlogService         : 从redis中获取Blog的数据，标题为条件注解@Conditional
+2020-04-17 17:50:45.494 DEBUG 5876 --- [http-nio-8080-exec-5] c.d.b.m.B.updateByPrimaryKeySelective    : ==>  Preparing: UPDATE blog SET title = ?,content = ?,first_picture = ?,flag = ?,description = ?,views = ?,appreciation = ?,share_statement = ?,comment = ?,publish = ?,recommend = ?,create_time = ?,update_time = ? WHERE blog_id = ? 
+2020-04-17 17:50:45.497 DEBUG 5876 --- [http-nio-8080-exec-5] c.d.b.m.B.updateByPrimaryKeySelective    : ==> Parameters: 条件注解@Conditional(String), # 简介
+在学习SpringBoot的时候我们会在各种自动配置类中看到大量使用了@Conditional注解，这篇文章主要简单说下@Conditional注解的使用方法。
+
+**定义：**
+按照《Spring Boot实战》书中所说的：“@Conditional根据满足某一特定条件创建一个特定的Bean。比方说，当某一个jar包在一个类路径下的时候，自动配置一个或多个Bean；或者只有某个Bean被创建才会才会创建另外一个Bean。总的来说，就是根据特定判定条件来控制Bean的创建行为，这样我们可以利用这个特性进行一些自动的配置。”
+
+在使用该注解之前我们来看一下@Conditional的源码
+```java
+@Target({ElementType.TYPE, ElementType.METHOD})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface Conditional {
+    Class<? extends Condition>[] value();
+}
+```
+
+我们关注下面的两点：
+
+* @Target({ElementType.TYPE, ElementType.METHOD})：表示该注解可以加在类上，表示该类下面的所有@Bean都会启用配置；也可以加在方法上，只对该方法有效
+
+* Class<? extends Condition>[] value()：表示要传一个Class集合给该注解，即@Conditional({XXX.class,XXX.class}) ，而且XXX类要继承Condition接口。关于Condition下面会说。
+
+
+# 示例
+我们以自己电脑的操作系统为判定条件，若我们的操作系统为Linux则创建Linux之父的Person的Bean；若操作系统为Windows则创建Windows之父的Person的Bean。
+
+**一、首先我们来创建一个Person类：**
+
+```java
+package com.study.spring.annotation.bean;
+
+/**
+ * Created on 2020/3/31
+ * Package com.study.spring.annotation.bean
+ *
+ * @author dsy
+ */
+public class Person {
+    private String name;
+    private Integer age;
+
+    public Person() {
+    }
+
+    public Person(String name, Integer age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}
+
+```
+**二、再创建一个配置类MyConfig：**
+
+```java
+package com.study.spring.annotation.config;
+
+import com.study.spring.annotation.bean.Person;
+import com.study.spring.annotation.condition.LinuxCondition;
+import com.study.spring.annotation.condition.WindowsCondition;
+import org.springframework.context.annotation.*;
+
+/**
+ * Created on 2020/3/31
+ * Package com.study.spring.annotation.config
+ *
+ * @author dsy
+ */
+@Configuration        //标识该类是一个配置类，相当于之前的一个xml配置文件
+public class MyConfig {
+ 
+    /**
+     * @Conditional({Condition})  注解：按照一定的条件将bean添加到IOC容器中
+     */
+    @Conditional({LinuxCondition.class})
+    @Bean("linux")
+    public Person person01(){
+        return new Person("linux之父",55);
+    }
+
+    @Bean("windows")
+    @Conditional({WindowsCondition.class})
+    public Person person02(){
+        return new Person("windows之父",48);
+    }
+
+}
+
+```
+
+**三、接下来创建两个Condition类：LinuxCondition和WindowsCondition：**
+
+```java
+package com.study.spring.annotation.condition;
+
+import org.springframework.context.annotation.Condition;
+import org.springframework.context.annotation.ConditionContext;
+import org.springframework.core.env.Environment;
+import org.springframework.core.type.AnnotatedTypeMetadata;
+
+/**
+ * Created on 2020/3/31
+ * Package com.study.spring.annotation.condition
+ *
+ * @author dsy
+ */
+//判断是否Linux系统 要进行判断必须实现Condition接口
+public class LinuxCondition implements Condition {
+
+    /**
+     *
+     * @param conditionContext  判断条件能使用的上下文环境
+     * @param annotatedTypeMetadata 当前标注了@Conditional注解的注释信息
+     * @return Boolean
+     */
+    @Override
+    public boolean matches(ConditionContext conditionContext, AnnotatedTypeMetadata annotatedTypeMetadata) {
+        Environment environment = conditionContext.getEnvironment();
+        String property = environment.getProperty("os.name");
+        return property!=null&&property.contains("Linux");
+    }
+}
+
+```
+
+```java
+package com.study.spring.annotation.condition;
+
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
+import org.springframework.beans.factory.support.BeanDefinitionRegistry;
+import org.springframework.context.annotation.Condition;
+import org.springframework.context.annotation.ConditionContext;
+import org.springframework.core.env.Environment;
+import org.springframework.core.type.AnnotatedTypeMetadata;
+
+/**
+ * Created on 2020/3/31
+ * Package com.study.spring.annotation.condition
+ *
+ * @author dsy
+ */
+//判断是否Windows系统 要进行判断必须实现Condition接口
+public class WindowsCondition implements Condition {
+
+    /**
+     *
+     * @param conditionContext  判断条件能使用的上下文环境
+     * @param annotatedTypeMetadata 当前标注了@Conditional注解的注释信息
+     * @return Boolean
+     */
+    @Override
+    public boolean matches(ConditionContext conditionContext, AnnotatedTypeMetadata annotatedTypeMetadata) {
+        Environment environment = conditionContext.getEnvironment();
+        String property = environment.getProperty("os.name");
+        return property != null && property.contains("Windows");
+    }
+}
+
+```
+
+**说明：** 这两个类均实现了Condition接口，里面只有一个matches方法返回值为boolea类型，也就是说@Conditional({LinuxCondition.class})或者@Conditional({WindowsCondition.class})通过判断注解括号里面条件类的matches方法的返回值来判定要不要在IOC容器中创建由@Conditional注解标识的这个Bean；若matches返回值为true则创建该Bean，若返回false则不创建该Bean。
+
+```java
+@FunctionalInterface
+public interface Condition {
+    boolean matches(ConditionContext var1, AnnotatedTypeMetadata var2);
+}
+```
+
+**四、测试：**
+
+```java
+package com.study.spring;
+
+import com.study.spring.annotation.bean.Person;
+import com.study.spring.annotation.config.MyConfig;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import java.util.Map;
+
+@SpringBootTest
+class ApplicationTests {
+    /**
+     * @Conditional 注解来按照条件获取bean实例
+     */
+    @Test
+    void testAnnotationConfig2(){
+        //创建IOC容器
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MyConfig.class);
+        //getBeanNamesForType方法按照类来获取该类的Bean的id
+        String[] names = applicationContext.getBeanNamesForType(Person.class);
+        //打印
+        for (String name:names){
+            System.out.println(name);
+        }
+        //获取具体的Bean
+        Map<String, Person> beans = applicationContext.getBeansOfType(Person.class);
+        System.out.println(beans);
+    }
+
+}
+
+```
+**打印输出：**
+
+```java
+windows
+{windows=Person{name='windows之父', age=48}}
+```
+
+若我们改变运行环境，加上参数：-Dos.name=Linux
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200401134456722.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zOTI5NjI4Mw==,size_16,color_FFFFFF,t_70#pic_center)
+再次运行打印输出：
+
+```java
+linux
+{linux=Person{name='linux之父', age=55}}
+```
+
+# 总结
+1、@Conditional注解的作用是按照一定的判定条件来控制Bean的创建
+2、@Conditional可以加在一个配置类上，表示该类下面的全部的@Bean都会启用配置；也可以加在一个@Bean的方法上面，只对该方法有效
+3、判定条件类XXXCondition类要实现Condition接口，并重写matches方法，在该方法里面写自己的判定逻辑
+
+参考资料：《Spring Boot实战》
+(String), https://images.unsplash.com/photo-1523895665936-7bfe172b757d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80(String), 原创(String), 在学习SpringBoot的时候我们会在各种自动配置类中看到大量使用了@Conditional注解，这篇文章主要简单说下@Conditional注解的使用方法。(String), 2590(Integer), true(Boolean), true(Boolean), true(Boolean), true(Boolean), true(Boolean), 2020-04-08 17:12:44.0(Timestamp), 2020-04-11 15:03:28.0(Timestamp), 8(Integer)
+2020-04-17 17:50:45.507 DEBUG 5876 --- [http-nio-8080-exec-5] c.d.b.m.B.updateByPrimaryKeySelective    : <==    Updates: 1
+2020-04-17 17:50:45.548  INFO 5876 --- [http-nio-8080-exec-5] com.dsy.blog.service.BlogService         : 更新redis中AllBlog的博客标题为：条件注解@Conditional的views为：2590
+2020-04-17 17:50:45.590 DEBUG 5876 --- [http-nio-8080-exec-5] c.d.b.m.BlogTagMapper.selectByExample    : ==>  Preparing: SELECT blog_tag_id,blog_id,tag_id FROM blog_tag WHERE ( ( blog_id = ? ) ) 
+2020-04-17 17:50:45.591 DEBUG 5876 --- [http-nio-8080-exec-5] c.d.b.m.BlogTagMapper.selectByExample    : ==> Parameters: 8(Integer)
+2020-04-17 17:50:45.592 DEBUG 5876 --- [http-nio-8080-exec-5] c.d.b.m.BlogTagMapper.selectByExample    : <==      Total: 1
+2020-04-17 17:50:45.593 DEBUG 5876 --- [http-nio-8080-exec-5] c.d.b.m.TagMapper.selectByPrimaryKey     : ==>  Preparing: SELECT tag_id,name FROM tag WHERE tag_id = ? 
+2020-04-17 17:50:45.593 DEBUG 5876 --- [http-nio-8080-exec-5] c.d.b.m.TagMapper.selectByPrimaryKey     : ==> Parameters: 1(Integer)
+2020-04-17 17:50:45.594 DEBUG 5876 --- [http-nio-8080-exec-5] c.d.b.m.TagMapper.selectByPrimaryKey     : <==      Total: 1
+2020-04-17 17:50:46.133 DEBUG 5876 --- [http-nio-8080-exec-7] c.d.b.m.CommentMapper.selectByExample    : ==>  Preparing: SELECT comment_id,blog_id,nick_name,email,content,avatar,create_time,parent_comment_id FROM comment WHERE ( ( blog_id = ? ) ) order by comment_id desc 
+2020-04-17 17:50:46.133 DEBUG 5876 --- [http-nio-8080-exec-7] c.d.b.m.CommentMapper.selectByExample    : ==> Parameters: 8(Integer)
+2020-04-17 17:50:46.135 DEBUG 5876 --- [http-nio-8080-exec-7] c.d.b.m.CommentMapper.selectByExample    : <==      Total: 0
+2020-04-17 17:50:46.150  INFO 5876 --- [http-nio-8080-exec-6] com.dsy.blog.service.BlogService         : 从redis中获取最新博客
