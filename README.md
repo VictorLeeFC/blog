@@ -20,7 +20,7 @@
 1. 克隆本项目到本地
 
 2. 根据sql文件夹下的blog.sql文件生成数据库
-3. 修改application.yml配置(Mysql配置以及Redis配置,在此强烈推荐[一个开源免费的Redis客户端](https://github.com/cinience/RedisStudio))
+3. 修改application.yml配置Mysql配置以及Redis配置,可视化操作redis推荐开源免费的RedisPlus客户端
 4. 运行项目
 
 博客首页路径：http://localhost:8080/
