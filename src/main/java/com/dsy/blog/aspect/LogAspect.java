@@ -59,29 +59,29 @@ public class LogAspect {
     }
 
 
-    private class RequestLog{
-        private String url;  //URL路径
-        private String ip;  //IP地址
-        private String classMethod;   //那一个类的哪一个方法
-        private Object[] args;  //请求参数
+private class RequestLog{
+    private String url;  //URL路径
+    private String ip;  //IP地址
+    private String classMethod;   //那一个类的哪一个方法
+    private Object[] args;  //请求参数
 
-        public RequestLog(String url, String ip, String classMethod, Object[] args) {
-            this.url = url;
-            this.ip = ip;
-            this.classMethod = classMethod;
-            this.args = args;
-        }
-
-        @Override
-        public String toString() {
-            return "RequestLog{" +
-                    "url='" + url + '\'' +
-                    ", ip='" + ip + '\'' +
-                    ", classMethod='" + classMethod + '\'' +
-                    ", args=" + Arrays.toString(args) +
-                    '}';
-        }
+    public RequestLog(String url, String ip, String classMethod, Object[] args) {
+        this.url = url;
+        this.ip = ip;
+        this.classMethod = classMethod;
+        this.args = args;
     }
+
+    @Override
+    public String toString() {
+        return "RequestLog{" +
+                "url='" + url + '\'' +
+                ", ip='" + ip + '\'' +
+                ", classMethod='" + classMethod + '\'' +
+                ", args=" + Arrays.toString(args) +
+                '}';
+    }
+}
 
 }
 
