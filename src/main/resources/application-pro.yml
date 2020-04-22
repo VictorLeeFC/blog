@@ -29,6 +29,12 @@ spring:
 logging:
   level:
     root: warn
-    com.dsy.blog: info
+    com.blog: info
   file:
     name: log/bolg-pro.log
+
+#自定义外部媒体文件路径
+media:
+  paths:
+    musicPath: F:\\media\\music
+    imagePath: F:\\media\\image128x128

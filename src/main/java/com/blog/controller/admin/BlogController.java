@@ -19,10 +19,11 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
- * Created on 2020/4/4
- * Package com.blog.controller.admin
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-01
+ * @author: li
+ * @version: v0.1
  */
 @Controller
 @RequestMapping(value = "/admin")

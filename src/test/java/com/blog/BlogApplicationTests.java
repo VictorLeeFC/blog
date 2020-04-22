@@ -1,7 +1,13 @@
 package com.blog;
 
 import org.springframework.boot.test.context.SpringBootTest;
-
+/**
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-07
+ * @author: li
+ * @version: v0.1
+ */
 @SpringBootTest
 class BlogApplicationTests {
 
@@ -39,7 +45,7 @@ class BlogApplicationTests {
 //    @Test
 //    public void getBlogsByPage(){
 ////        Type type = new Type();
-////        type.setName("杜世银");
+////        type.setName("姓名");
 ////        Blog blog = new Blog();
 ////        blog.setType(type);
 ////        PageHelper.startPage(1,10);

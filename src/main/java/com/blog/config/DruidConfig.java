@@ -13,10 +13,11 @@ import javax.sql.DataSource;
 import java.sql.SQLException;
 
 /**
- * Created on 2020/4/2
- * Package com.blog.config
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-13
+ * @author: li
+ * @version: v0.1
  */
 @Configuration
 public class DruidConfig {

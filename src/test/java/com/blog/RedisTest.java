@@ -3,10 +3,11 @@ package com.blog;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /**
- * Created on 2020/4/12
- * Package com.blog
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-07
+ * @author: li
+ * @version: v0.1
  */
 @SpringBootTest
 public class RedisTest {

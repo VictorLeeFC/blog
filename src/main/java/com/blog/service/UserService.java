@@ -3,10 +3,11 @@ package com.blog.service;
 import com.blog.po.User;
 
 /**
- * Created on 2020/4/4
- * Package com.blog.service
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-26
+ * @author: li
+ * @version: v0.1
  */
 public interface UserService {
     User checkUser(String username,String password);

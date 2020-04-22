@@ -8,10 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * Created on 2020/4/4
- * Package com.blog.service
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-26
+ * @author: li
+ * @version: v0.1
  */
 @Service
 public class UserServiceImpl implements UserService {

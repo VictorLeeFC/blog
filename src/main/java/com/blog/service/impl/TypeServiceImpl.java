@@ -19,10 +19,11 @@ import tk.mybatis.mapper.entity.Example;
 import java.util.*;
 
 /**
- * Created on 2020/4/4
- * Package com.blog.service.impl
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-26
+ * @author: li
+ * @version: v0.1
  */
 @Service
 @Slf4j

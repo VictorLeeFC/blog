@@ -1,27 +1,30 @@
 # blog
 
-**简介：** 基于Spring Boot开发的小型个人博客+后台管理
+**简介：** 基于Spring Boot开发的小型个人博客
+* 1.前台门户
+* 2.后台管理
+* 3.数据监控
 
 **技术组合：**
-
-* 后端：Spring Boot + Mybatis + thymeleaf模板
-* 数据库：MySQL+Redis
-* 前端UI：Semantic UI框架
+* 后端：Spring Boot + Mybatis + thymeleaf;
+* 数据库：MySQL+Redis;
+* 前端UI：Semantic UI + APlayer音乐控件;
 
 **工具与环境：**
-
-* IDEA
+* IDEA2018
 * Maven3
 * JDK8
-
 
 # 如何运行
 
 1. 克隆本项目到本地
 
 2. 根据sql文件夹下的blog.sql文件生成数据库
-3. 修改application.yml配置Mysql配置以及Redis配置,可视化操作redis推荐开源免费的RedisPlus客户端
-4. 运行项目
+
+3. 修改application.yml配置中Mysql以及Redis等适合你主机的配置
+
+4. Linux系统指定外部配置文件后台启动示例：
+   nohup java -jar blog.jar --Dspring.config.location=application-pro.yml --server.port=8081 &
 
 博客首页路径：http://localhost:8080/
 

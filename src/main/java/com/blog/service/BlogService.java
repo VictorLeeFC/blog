@@ -7,10 +7,11 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created on 2020/4/5
- * Package com.blog.service
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-26
+ * @author: li
+ * @version: v0.1
  */
 public interface BlogService {
 

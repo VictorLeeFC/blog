@@ -16,10 +16,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 /**
- * Created on 2020/4/10
- * Package com.blog.controller
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-14
+ * @author: li
+ * @version: v0.1
  */
 @Controller
 public class TypeShowController {

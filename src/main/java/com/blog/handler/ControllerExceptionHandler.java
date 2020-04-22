@@ -11,10 +11,11 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created on 2020/4/3
- * Package com.blog.handler
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-08
+ * @author: li
+ * @version: v0.1
  */
 @ControllerAdvice   //定义全局异常处理类(拦截有@Controller注解的控制器)
 public class ControllerExceptionHandler {

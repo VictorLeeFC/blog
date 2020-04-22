@@ -9,10 +9,11 @@ import tk.mybatis.mapper.common.Mapper;
 import java.util.List;
 
 /**
- * Created on 2020/4/5
- * Package com.blog.mapper
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-23
+ * @author: li
+ * @version: v0.1
  */
 public interface BlogMapper extends Mapper<Blog>{
 

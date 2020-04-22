@@ -22,10 +22,11 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Created on 2020/4/2
- * Package com.blog.controller
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-12
+ * @author: li
+ * @version: v0.1
  */
 @Controller
 public class IndexController {

@@ -8,10 +8,11 @@ import javax.persistence.Id;
 import java.util.Date;
 
 /**
- * Created on 2020/4/3
- * Package com.blog.po
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-02-28
+ * @author: li
+ * @version: v0.1
  */
 @Setter
 @Getter

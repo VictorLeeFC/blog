@@ -15,10 +15,11 @@ import org.commonmark.renderer.html.HtmlRenderer;
 import java.util.*;
 
 /**
- * Created on 2020/4/9
- * Package com.blog.util
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-26
+ * @author: li
+ * @version: v0.1
  */
 public class MarkDownUtils {
 

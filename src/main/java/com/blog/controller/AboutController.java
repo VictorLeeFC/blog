@@ -4,10 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
- * Created on 2020/4/11
- * Package com.blog.controller
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-03
+ * @author: li
+ * @version: v0.1
  */
 @Controller
 public class AboutController {

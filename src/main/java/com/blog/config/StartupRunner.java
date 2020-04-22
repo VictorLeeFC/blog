@@ -12,10 +12,11 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 /**
- * Created on 2020/4/13
- * Package com.blog.config
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-04-02
+ * @author: li
+ * @version: v0.1
  */
 @Component
 @Slf4j

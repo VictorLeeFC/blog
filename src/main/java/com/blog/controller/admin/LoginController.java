@@ -5,10 +5,7 @@ import com.blog.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.thymeleaf.util.StringUtils;
 
@@ -19,10 +16,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created on 2020/4/4
- * Package com.blog.controller.admin
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-02
+ * @author: li
+ * @version: v0.1
  */
 @Controller
 @RequestMapping(value = "/admin")
@@ -40,8 +38,11 @@ public class LoginController {
     @PostMapping(value = "login")
     public String login(@RequestParam String username,
                         @RequestParam String password,
-                        HttpSession session, RedirectAttributes attributes){
+                        HttpSession session, RedirectAttributes attributes)
+    {
+        //获得用户信息
         User admin = userService.checkUser(username, password);
+
         if (admin!=null){
             admin.setPassword(null);
             session.setAttribute("user",admin);
@@ -58,6 +59,5 @@ public class LoginController {
         session.removeAttribute("user");
         return "redirect:admin";
     }
-
 
 }

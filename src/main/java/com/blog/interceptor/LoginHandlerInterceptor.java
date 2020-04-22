@@ -7,10 +7,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Created on 2020/4/4
- * Package com.blog.intercepter
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-08
+ * @author: li
+ * @version: v0.1
  */
 
 public class LoginHandlerInterceptor implements HandlerInterceptor {

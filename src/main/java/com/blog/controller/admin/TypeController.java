@@ -12,10 +12,11 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /**
- * Created on 2020/4/4
- * Package com.blog.controller.admin
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-02
+ * @author: li
+ * @version: v0.1
  */
 @Controller
 @RequestMapping(value = "/admin")

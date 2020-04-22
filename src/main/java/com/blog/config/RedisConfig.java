@@ -14,10 +14,11 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 
 /**
- * Created on 2020/4/12
- * Package com.blog.config
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-21
+ * @author: li
+ * @version: v0.1
  */
 @Configuration
 @EnableCaching

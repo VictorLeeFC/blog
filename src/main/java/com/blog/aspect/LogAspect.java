@@ -10,10 +10,12 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
-
 /**
- * Created
- * Package com.blog.aspect
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-04-02
+ * @author: li
+ * @version: v0.1
  */
 @Aspect
 @Component

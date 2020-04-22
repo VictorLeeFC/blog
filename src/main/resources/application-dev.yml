@@ -28,6 +28,12 @@ spring:
 logging:
   level:
     root: info
-    com.dsy.blog: debug
+    com.blog: debug
   file:
     name: log/bolg-dev.log
+
+#自定义外部媒体文件路径
+media:
+  paths:
+    musicPath: F:\\media\\music
+    imagePath: F:\\media\\image128x128

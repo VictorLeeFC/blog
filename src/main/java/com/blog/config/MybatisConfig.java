@@ -5,10 +5,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Created on 2020/4/2
- * Package com.blog.config
- *
- * @author dsy
+ * @description: some desc
+ * @git: https://github.com/VictorLeeFC
+ * @date: 2020-03-10
+ * @author: li
+ * @version: v0.1
  */
 @Configuration
 public class MybatisConfig {
