@@ -9,6 +9,8 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import java.io.File;
+
 /**
  * @description: some desc
  * @git: https://github.com/VictorLeeFC
@@ -56,12 +58,21 @@ public class WebConfig implements WebMvcConfigurer {
         //判断是什么操作系统
         boolean isWin = System.getProperty("os.name").toLowerCase().contains("win");
         //根据不同系统设置不同映射
-        registry.addResourceHandler("/admin/media/music/**")
-            .addResourceLocations("file:" + mediaProperties.getMusicPath() + (isWin?"\\":"/"));
-        //
-        registry.addResourceHandler("/admin/media/image/**")
-                .addResourceLocations("file:" + mediaProperties.getImagePath() + (isWin?"\\":"/"));
+        if(isWin) {
+            //win
+            registry.addResourceHandler("/admin/media/music/**")
+                    .addResourceLocations("file:" + mediaProperties.getMusicPath() + "\\");
 
+            registry.addResourceHandler("/admin/media/image/**")
+                    .addResourceLocations("file:" + mediaProperties.getImagePath() + "\\");
+        }
+
+        //linux
+        registry.addResourceHandler("/admin/media/music/**")
+                .addResourceLocations(mediaProperties.getMusicPath() + "/");
+
+        registry.addResourceHandler("/admin/media/image/**")
+                .addResourceLocations(mediaProperties.getImagePath() + "/");
 
     }
 
