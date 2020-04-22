@@ -23,7 +23,9 @@
 
 3. 修改application.yml配置中Mysql以及Redis等适合你主机的配置
 
-4. Linux系统指定外部配置文件后台启动示例：
+4. 播放音乐需要在yml中指定你存放音乐的磁盘目录,win和linux都支持config类中已做适配
+
+5. Linux系统指定外部配置文件后台启动示例：
    nohup java -jar blog.jar --Dspring.config.location=application-pro.yml --server.port=8081 &
 
 # 博客操作相关
