@@ -1,17 +1,3 @@
-/*
-Navicat MySQL Data Transfer
-
-Source Server         : localhost_3306
-Source Server Version : 50720
-Source Host           : localhost:3306
-Source Database       : blog
-
-Target Server Type    : MYSQL
-Target Server Version : 50720
-File Encoding         : 65001
-
-Date: 2020-04-11 21:32:07
-*/
 
 SET FOREIGN_KEY_CHECKS = 0;
 
@@ -271,6 +257,6 @@ CREATE TABLE `user`
 -- Records of user
 -- ----------------------------
 INSERT INTO `user`
-VALUES ('1', '维多多', 'admin', '21232F297A57A5A743894A0E4A801FC3', '250275079@qq.com',
+VALUES ('1', '管理员', 'admin', '21232F297A57A5A743894A0E4A801FC3', '10086@qq.com',
         'https://images.unsplash.com/photo-1534375971785-5c1826f739d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
         null, null, null);
