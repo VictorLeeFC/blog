@@ -26,9 +26,12 @@
 4. Linux系统指定外部配置文件后台启动示例：
    nohup java -jar blog.jar --Dspring.config.location=application-pro.yml --server.port=8081 &
 
+# 博客操作相关
+
 博客首页路径：http://localhost:8080/
 
-博客后台管理：http://localhost:8080/admin  账号：admin 密码：admin
+博客后台管理：http://localhost:8080/admin  账号：admin 密码：admin 
 
 Druid数据监控：http://localhost:8080/druid/ 账号：admin 密码：admin
 
+最后：在你真正部署上线时请在MD5Utils生成你自己的密码覆盖默认密码。
