@@ -12,9 +12,14 @@ import org.springframework.web.bind.annotation.GetMapping;
  */
 @Controller
 public class AboutController {
-
+    /** 关于我 */
     @GetMapping(value = "/about")
     public String about() {
         return "about";
+    }
+    /** 简历 */
+    @GetMapping(value = "/about/resume")
+    public String resume(){
+        return "resume";
     }
 }

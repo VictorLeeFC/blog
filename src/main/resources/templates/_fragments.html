@@ -21,7 +21,7 @@
 <nav  th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini m-shadow-small" >
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
-            <h2 class="ui teal header item">Blog</h2>
+            <h2 class="ui teal header item">部落阁</h2>
             <a href="#" th:href="@{/}" class="m-item item m-mobile-hide " th:classappend="${n==1} ? 'active'"><i
                     class="mini home icon"></i>首页</a>
             <a href="#" th:href="@{/types/-1}" class="m-item item m-mobile-hide" th:classappend="${n==2} ? 'active'"><i
@@ -84,20 +84,6 @@
                 <p class="m-text-thin m-text-spaced m-opacity-tiny" style="color: #D1EDFF">Copyright © [[${#dates.format(new java.util.Date().getTime(), 'yyyy')}]]</p>
             </div>
 
-            <!-- 备案信息 -->
-            <div class="three wide column">
-                <h4 class="ui inverted header m-text-thin m-text-spaced ">备案信息</h4>
-                <div class="ui inverted link list">
-                    <a class="item m-text-thin">
-                    <img class="ui rounded image" style="width: 20px;height: 20px;"
-                           src="../static/images/icp.png" th:src="@{/images/icp.png}"/>
-                    </a>
-                    <a class="item m-text-thin" href="http://www.beian.gov.cn/" target="_blank">
-                        蜀ICP:xxxxxxxx
-                    </a>
-                </div>
-            </div>
-
             <!-- 链接 -->
             <div class="three wide column">
                 <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
@@ -113,6 +99,21 @@
                          class="ui rounded image" style="width: 110px">
                 </div>
             </div>
+
+            <!-- 备案信息 -->
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">备案信息</h4>
+                <div class="ui inverted link list">
+                    <a class="item m-text-thin">
+                    <img class="ui rounded image" style="width: 20px;height: 20px;"
+                           src="../static/images/icp.png" th:src="@{/images/icp.png}"/>
+                    </a>
+                    <a class="item m-text-thin" href="http://www.beian.gov.cn/" target="_blank">
+                        蜀ICP:xxxxxxxx
+                    </a>
+                </div>
+            </div>
+
         </div>
     </div>
 

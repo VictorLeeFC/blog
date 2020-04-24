@@ -84,19 +84,6 @@
         <p class="m-text-thin m-text-spaced m-opacity-tiny" style="color: #D1EDFF">Copyright © [[${#dates.format(new java.util.Date().getTime(), 'yyyy')}]]</p>
       </div>
 
-      <!-- 备案信息 -->
-      <div class="three wide column">
-        <h4 class="ui inverted header m-text-thin m-text-spaced ">备案信息</h4>
-        <div class="ui inverted link list">
-          <a class="item m-text-thin">
-            <img class="ui rounded image" style="width: 20px;height: 20px;"
-                 src="../static/images/icp.png" th:src="@{/images/icp.png}"/>
-          </a>
-          <a class="item m-text-thin" href="http://www.beian.gov.cn/" target="_blank">
-            蜀ICP:xxxxxxxx
-          </a>
-        </div>
-      </div>
 
       <!-- 链接 -->
       <div class="three wide column">
@@ -113,6 +100,20 @@
                class="ui rounded image" style="width: 110px">
         </div>
       </div>
+      <!-- 备案信息 -->
+      <div class="three wide column">
+        <h4 class="ui inverted header m-text-thin m-text-spaced ">备案信息</h4>
+        <div class="ui inverted link list">
+          <a class="item m-text-thin">
+            <img class="ui rounded image" style="width: 20px;height: 20px;"
+                 src="../static/images/icp.png" th:src="@{/images/icp.png}"/>
+          </a>
+          <a class="item m-text-thin" href="http://www.beian.gov.cn/" target="_blank">
+            蜀ICP:xxxxxxxx
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </footer>

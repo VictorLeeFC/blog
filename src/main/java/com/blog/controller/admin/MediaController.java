@@ -40,16 +40,16 @@ public class MediaController {
         //创建一个容器包装要传递的数据
         Map<String,Object> resp = new HashMap<>();
         //先从缓存中去看有没有数据
-        /*Boolean hasKey = this.stringRedisTemplate.hasKey(RedisKeyUtils.MEDIA_MUSIC);
+        Boolean hasKey = this.stringRedisTemplate.hasKey(RedisKeyUtils.MEDIA_MUSIC);
         if (hasKey){
             Map<Object, Object> cacheMap = this.stringRedisTemplate.opsForHash().entries(RedisKeyUtils.MEDIA_MUSIC);
             if (cacheMap != null && !cacheMap.isEmpty()) {
                 cacheMap.forEach((k,v)-> resp.put(k.toString(),v));
                 return ResponseEntity.ok(resp);
             }
-        }*/
+        }
         try {
-            System.out.println("-------1------controller调用读取磁盘文件方法------------");
+            //System.out.println("-------1------controller调用读取磁盘文件方法------------");
             //获得硬盘的文件
             String musics = getHardDiskDriveFileNames(mediaProperties.getMusicPath());
             String images = getHardDiskDriveFileNames(mediaProperties.getImagePath());
@@ -62,7 +62,7 @@ public class MediaController {
             }
             if (resp!=null && !resp.isEmpty()) {
 
-                //this.stringRedisTemplate.opsForHash().putAll(RedisKeyUtils.MEDIA_MUSIC, resp);
+                this.stringRedisTemplate.opsForHash().putAll(RedisKeyUtils.MEDIA_MUSIC, resp);
 
                 return ResponseEntity.ok(resp);
             }
@@ -86,7 +86,7 @@ public class MediaController {
             return null;
         }
         //实例化这个目录
-        System.out.println("---------2---------从这个路径读取：" + directory);
+        //System.out.println("---------2---------从这个路径读取：" + directory);
         File f = new File(directory);
         if(!f.isDirectory()){
             return directory + "不是当前系统环境的目录!";
@@ -94,7 +94,7 @@ public class MediaController {
         //获得这个目录下所有的文件名
         String[] names = f.list();
         if (names==null || names.length==0){
-            System.out.println("------------------没有获取到文件");
+            //System.out.println("------------------没有获取到文件");
             return "该路径下没有文件";
         }
         //字符数组拼接为,号间隔的字符串。
@@ -103,7 +103,7 @@ public class MediaController {
             sb.append(name);
             sb.append(",");
         }
-        System.out.println("---------3---------读取磁盘文件所有流程已经走通");
+        //System.out.println("---------3---------读取磁盘文件所有流程已经走通");
         return StringUtils.substring(sb.toString(), 0, sb.toString().length() - 1);
     }
 

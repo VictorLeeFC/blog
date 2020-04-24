@@ -21,8 +21,7 @@ spring:
       web-stat-filter.enabled: true
   #redis配置
   redis:
-    database: 1
-    password: 
+    password: Redis-123456
     timeout: 10000
 # 日志设置
 logging:

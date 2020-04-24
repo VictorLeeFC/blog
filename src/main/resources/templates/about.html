@@ -19,9 +19,20 @@
     <div class="ui container">
 
         <div class="ui stackable grid">
+
             <div class="eleven wide column">
+
                 <div class="ui segment">
-                    <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                    <span class="ui tag green label">我的简历</span>
+
+                    <a class="ui red large horizontal label" href="resume.html"
+                       th:href="@{/about/resume}">
+                        点击此处查看我的简历,在简历页面中右键即可打印。
+                    </a>
+                </div>
+
+                <div class="ui segment">
+                    <img src="../static/images/bg-code-x.jpg" th:src="@{/images/bg-code-x.jpg}"
                          alt="" class="ui rounded image">
                 </div>
             </div>
@@ -31,7 +42,7 @@
                 </div>
                 <div class="ui attached segment">
                     <p class="m-text">一个编程爱好者、终身学习者，将学习无限循环,希望结识可以共同成长的小伙伴。</p>
-                    <p class="m-text">热爱编程，喜欢折腾，正在探索高效学习编程技术的方法...</p>
+                    <p class="m-text">热爱编程，正在探索学习编程技术...</p>
                 </div>
                 <div class="ui attached segment">
                     <div class="ui orange basic left pointing label">编程</div>

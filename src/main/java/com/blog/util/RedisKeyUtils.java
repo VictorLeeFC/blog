@@ -20,6 +20,6 @@ public class RedisKeyUtils {
     /** 全部博客 */
     public static final String ALL_BLOG = "AllBlog";
     /** 多媒体文件前缀 */
-    public static final String MEDIA_MUSIC = "MEDIA_MUSIC:";
+    public static final String MEDIA_MUSIC = "MEDIA_MUSIC";
 
 }

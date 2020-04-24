@@ -50,7 +50,7 @@ public class Blog implements Comparable<Blog> {
 
     @Transient
     protected List<Tag> tags;
-
+    //基于更新时间对这个对象排序
     @Override
     public int compareTo(Blog o) {
         return o.getUpdateTime().compareTo(this.updateTime);

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>个人简历</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <style>
+        body{
+            /** 添加一背景图片，注意页面静态时是全路径 */
+            background-image: url("/images/bg.png");
+        }
+    </style>
+</head>
+<body>
+
+<!-- 整个页面ui容器响应式外边距 -->
+<div class="ui container">
+    <!-- 分两列 高度1050适合A4纸 加divided带垂直分割线 -->
+    <div class="ui two column grid" style="height:1050px">
+        <!-- 表示行可以伸缩 -->
+        <div class="stretched row">
+            <!-- 左半部 -->
+            <div class="column" style="width: 30%;">
+                <!-- 响应式外容器 -->
+                <div class="ui raised segment" style="align-self: center;">
+                    <!-- 响应式内容器 -->
+                    <div class="ui segment" >
+                        <!-- 标题 -->
+                        <h4 class="ui horizontal divider header">
+                            <i class="address card outline icon"></i>
+                            个人信息
+                        </h4>
+                        <!-- 个人信息详情 -->
+                        <table class="ui definition table">
+                            <tr>
+                                <!-- 2寸照占两列 -->
+                                <td colspan="2">
+                                    <!-- 带边框，圆角 -->
+                                    <img class="ui medium bordered rounded image"
+                                         src="../static/images/xjpic.jpg"
+                                         th:src="@{/images/xjpic.jpg}"
+                                         style="width: 100%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><i class="user secret icon"></i></td>
+                                <td>李作为</td>
+                            </tr>
+                            <tr>
+                                <td><i class="birthday cake icon"></i></td>
+                                <td>1993-01-10</td>
+                            </tr>
+                            <tr>
+                                <td><i class="home icon"></i></td>
+                                <td>四川成都</td>
+                            </tr>
+                            <tr>
+                                <td><i class="universal access icon"></i></td>
+                                <td>电子科技大学</td>
+                            </tr>
+                            <tr>
+                                <td><i class="book icon"></i></td>
+                                <td>计算机应用技术</td>
+                            </tr>
+                            <tr>
+                                <td><i class="graduation cap icon"></i></td>
+                                <td>大学专科</td>
+                            </tr>
+                            <tr>
+                                <td><i class="mobile alternate icon"></i></td>
+                                <td>18628122181</td>
+                            </tr>
+                            <tr>
+                                <td><i class="envelope outline icon"></i></td>
+                                <td>250275079@qq.com</td>
+                            </tr>
+                            <tr>
+                                <td><i class="globe icon"></i></td>
+                                <td><a href="http://www.stackzone.cn">个人网站</a></td>
+                            </tr>
+                            <tr>
+                                <td><i class="github icon"></i></td>
+                                <td><a href="https://github.com/VictorLeeFC/">GitHub</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- 响应式内容器 -->
+                    <div class="ui segment" style="align-self: center;width: 100%;">
+                        <!-- 自我描述 -->
+                        <i class="info icon"></i><span>&nbsp&nbsp掌握的开发技术</span>
+                        <p>
+                            熟悉JAVAWEB相关技术:SSH、SSM、SpringBoot、SpringCloud
+                            微服务组件，分布式中间件Dubbox，消息中间件RabbitMQ、ActiveMQ。
+                            关系数据库MySQL、Oracle，索引库ElasticSearch，缓存数据库Redis。
+                            前端技术:JS、JQ、AngularJS、Vue，UI组件EasyUI、vuetify、Semantic、Bootstrap。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右半部 -->
+            <div class="column" style="width: 70%;">
+                <!-- 响应式外容器 -->
+                <div class="ui raised segment" >
+                    <!-- 支持凸起的内容器 -->
+                    <div class="ui raised segment">
+                        <!-- 凸起来那部分内容 -->
+                        <a class="ui blue ribbon label">部落阁个人网站项目</a>
+                        <!-- 凸起后部显示内容 -->
+                        <span><strong>工具与环境：</strong>IDEA、Maven、Git</span>
+                        <!-- 边框 -->
+                        <div class="ui segment">
+                            <!-- 正文容器开始 -->
+                            <p>
+                                <strong>技术栈：</strong>
+                                SpringBoot、Mybatis、Druid、Redis、Thymeleaf、SemanticUI
+                                <br/>
+                                <strong>负责任务：</strong>
+                                实现博客门户、后台管理、后台数据监控：
+                                1.门户页面音乐播放使用AplayerJS插件，播放源是读取外部磁盘文件，
+                                首先向后台发送AJAX请求获得后台读取的全部媒体文件名组成的字符串集
+                                ，获得响应结果后媒体文件名拼接请求路径映射到本地实体。
+                                2.搜索功能匹配的是‘标题、类型、标签’三个字段，后台文章发布使用
+                                Editor.md插件实现。先期考虑不足首页博文频繁访问会导致服务器崩溃，
+                                后期优化首次启动预先缓存博文记录到Redis。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 支持凸起的内容器 -->
+                    <div class="ui raised segment">
+                        <!-- 凸起来那部分内容 -->
+                        <a class="ui blue ribbon label">Restful分布式微服务电商项目</a>
+                        <!-- 凸起后部显示内容 -->
+                        <span><strong>工具与环境：</strong>IDEA、Maven、Git</span>
+                        <!-- 边框 -->
+                        <div class="ui segment">
+                            <!-- 正文容器开始 -->
+                            <p>
+                                <strong>技术栈：</strong>
+                                SpringBoot、SpringCloud、Mybatis、ElasticSearch、RabbitMQ、
+                                FastDfs、Nginx、Swagger等。
+                                <br/>
+                                <strong>负责任务：</strong>
+                                各个微服务注册到Eureka，通过Feign远程调用。项目中比较难的两个部分是:
+                                搜索微服务，商品微服务，搜索微服务需要将SPU和SKU相关联的多张表数据抽取
+                                到DTO然后同步到ES索引库，ES后台业务逻辑中使用：词条，聚合，分组等条件
+                                实现个性化词条搜索。在商品微服务发生改动时向消息微服务发送消息，搜索服务
+                                根据改变内容更新索引库词条。用户注册使用阿里短信SDK验证，JWT实现无状态登录。
+                                前台UI组件使用VuetifyJS，业务逻辑和数据绑定使用Vue实现。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 支持凸起的内容器 -->
+                    <div class="ui raised segment">
+                        <!-- 凸起来那部分内容 -->
+                        <a class="ui blue ribbon label">分布式B2C电商</a>
+                        <!-- 凸起后部显示内容 -->
+                        <span><strong>工具与环境：</strong>Eclipse、Maven、SVN</span>
+                        <!-- 边框 -->
+                        <div class="ui segment">
+                            <!-- 正文容器开始 -->
+                            <p>
+                                <strong>技术栈：</strong>
+                                SpringMVC、Spring、Mybatis、SpringBoot、Dubbox、ActiveMQ、Redis、FastDfs等。
+                                <br/>
+                                <strong>负责任务：</strong>
+                                主要对SPU、SKU表数据操作完成商品模块功能，后台管理模块使用Dubbox远程调用
+                                商品模块实现完整CRUD操作。SpringBoot+FastDFS实现图片存储，ActiveMQ实现
+                                消息服务，Redis实现缓存热点商品信息，用户注册验证使用阿里云短信SDK实现。
+                                前台UI使用BootStrap构建，数据使用AngularJS绑定。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 支持凸起的内容器 -->
+                    <div class="ui raised segment">
+                        <!-- 凸起来那部分内容 -->
+                        <a class="ui blue ribbon label">ERP企业资源管理系统</a>
+                        <!-- 凸起后部显示内容 -->
+                        <span><strong>工具与环境：</strong>Eclipse、Maven、SVN</span>
+                        <!-- 边框 -->
+                        <div class="ui segment">
+                            <!-- 正文容器开始 -->
+                            <p>
+                                <strong>技术栈：</strong>
+                                Struts2、Spring、Hibernate、Oracle12C、EasyUI
+                                <br/>
+                                <strong>负责任务：</strong>
+                                项目中期业务模块冗余代码非常多，利用反射原理抽取泛型的
+                                公共Dao、Biz、Action。管理系统实现了POI导出Excel文档
+                                ，HighCharts实现销售比例饼图，销售趋势折线图。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
