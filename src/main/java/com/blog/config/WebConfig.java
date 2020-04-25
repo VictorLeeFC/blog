@@ -65,14 +65,16 @@ public class WebConfig implements WebMvcConfigurer {
 
             registry.addResourceHandler("/admin/media/image/**")
                     .addResourceLocations("file:" + mediaProperties.getImagePath() + "\\");
+
+        //这个else不要的话需要:return;不然就是两个系统的路径同时存在
+        }else {
+            //linux
+            registry.addResourceHandler("/admin/media/music/**")
+                    .addResourceLocations("file:" + mediaProperties.getMusicPath());
+
+            registry.addResourceHandler("/admin/media/image/**")
+                    .addResourceLocations("file:" + mediaProperties.getImagePath());
         }
-        //linux
-        registry.addResourceHandler("/admin/media/music/**")
-                .addResourceLocations("file:" + mediaProperties.getMusicPath());
-
-        registry.addResourceHandler("/admin/media/image/**")
-                .addResourceLocations("file:" + mediaProperties.getImagePath());
-
     }
 
 }
