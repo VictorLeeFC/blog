@@ -23,7 +23,7 @@
 
 3. 修改application.yml配置中Mysql以及Redis等适合你主机的配置
 
-4. 播放音乐需要在yml中指定你存放音乐的磁盘目录,win和linux都支持config类中已做适配。
+4. 播放音乐需要在yml中指定你存放音乐的磁盘目录,win和linux都支持config类中路径字段是数组1为win2为linux。
 
 **如使用nginx代理外部静态媒体资源需要这样配置：**
     
