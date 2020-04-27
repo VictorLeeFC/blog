@@ -35,5 +35,10 @@ logging:
 #自定义外部媒体文件路径
 media:
   paths:
-    musicPath: /home/media/music #音乐
-    imagePath: /home/media/image128x128  #封面
+    musicPath:
+      - F:\\media\\music #音乐win
+      - /home/media/music #音乐
+
+    imagePath:
+      - F:\\media\\image128x128 #封面win
+      - /home/media/image128x128  #封面

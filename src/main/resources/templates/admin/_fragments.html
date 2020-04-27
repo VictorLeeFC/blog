@@ -51,7 +51,7 @@
 
     <!-- 播放器 -->
     <div class="ui inverted secondary stackable">
-      <div id="aplayer"></div>
+      <div id="aplayer" style="background-color: brown;"></div>
     </div>
 
   <!-- 手机显示内容 -->
@@ -62,67 +62,64 @@
 
 <!--底部footer-->
 <footer th:fragment="footer" class="ui inverted vertical segment m-padded-tb-massive">
-  <div class="ui center aligned container">
-    <div class="ui inverted divided stackable grid">
-      <!-- 部落阁 -->
-      <div class="three wide column">
-        <h4 class="ui inverted header m-text-thin m-text-spaced ">部落阁</h4>
-        <p class="m-text-thin m-text-spaced m-opacity-mini" th:text="'这是' + ${session.user.nickName} + '的个人博客,有关于学习、分享、交流。' ">个人博客</p>
-      </div>
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <!-- 部落阁 -->
+            <div class="three wide column">
+              <h4 class="ui inverted header m-text-thin m-text-spaced ">部落阁</h4>
+              <p class="m-text-thin m-text-spaced m-opacity-mini" th:text="'这是' + ${session.user.nickName} + '的个人博客,有关于学习、分享、交流。' ">个人博客</p>
+            </div>
 
-      <!--最新博客-->
-      <div class="three wide column">
-        <h4 class="ui inverted header m-text-thin m-text-spaced ">最新博客</h4>
-        <div id="newblog-container">
-          <div class="ui inverted link list" th:fragment="newBlogList">
-            <a href="#" th:href="@{/blog/{id}(id=${blog.blogId})}" target="_blank" class="item m-text-thin"
-               th:each="blog,stat : ${newBlogs}" th:if="${stat.index<3}" th:text="${blog.title}">用户故事（User Story）</a>
+            <!--最新博客-->
+            <div class="three wide column">
+              <h4 class="ui inverted header m-text-thin m-text-spaced ">最新博客</h4>
+              <div id="newblog-container">
+                <div class="ui inverted link list" th:fragment="newBlogList">
+                  <a href="#" th:href="@{/blog/{id}(id=${blog.blogId})}" target="_blank" class="item m-text-thin"
+                     th:each="blog,stat : ${newBlogs}" th:if="${stat.index<3}" th:text="${blog.title}">用户故事（User Story）</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 链接 -->
+            <div class="three wide column">
+              <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+              <a href="#" th:href="#{github}" target="_blank" class="ui circular icon button"><i
+                      class="github icon"></i></a>
+              <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
+
+              <a href="#" class="ui qq circular icon button" data-content="250275079"
+                 data-position="bottom center"><i class="qq icon"></i></a>
+
+              <div class="ui wechat-qr flowing popup transition hidden">
+                <img src="../../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt=""
+                     class="ui rounded image" style="width: 110px">
+              </div>
+            </div>
+            <!-- 版权信息 -->
+            <div class="four wide column">
+              <h4 class="ui inverted header m-text-thin m-text-spaced ">版权</h4>
+              <p class="m-text-thin m-text-spaced m-opacity-tiny" style="color: #D1EDFF">StackZone Designed by VictorLeeFC</p>
+
+              <!--<div class="ui inverted section divider"></div>-->
+
+              <p class="m-text-thin m-text-spaced m-opacity-tiny" style="color: #D1EDFF">Copyright © [[${#dates.format(new java.util.Date().getTime(), 'yyyy')}]]</p>
+            </div>
+
+
+          <!-- 备案信息 -->
+          <div class="four wide column">
+            <h4 class="ui inverted header m-text-thin m-text-spaced ">备案信息</h4>
+            <a class="item m-text-thin" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=" target="_blank">
+              蜀公安网备:正在审核
+            </a>
+            <br>
+            <a class="item m-text-thin" href="http://www.beian.miit.gov.cn/" target="_blank">
+              蜀ICP备:20011904号
+            </a>
           </div>
         </div>
-      </div>
-
-      <!-- 版权信息 -->
-      <div class="four wide column">
-        <h4 class="ui inverted header m-text-thin m-text-spaced ">版权</h4>
-        <p class="m-text-thin m-text-spaced m-opacity-tiny" style="color: #D1EDFF">StackZone Designed by VictorLeeFC</p>
-
-        <!--<div class="ui inverted section divider"></div>-->
-
-        <p class="m-text-thin m-text-spaced m-opacity-tiny" style="color: #D1EDFF">Copyright © [[${#dates.format(new java.util.Date().getTime(), 'yyyy')}]]</p>
-      </div>
-
-
-      <!-- 链接 -->
-      <div class="three wide column">
-        <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
-        <a href="#" th:href="#{github}" target="_blank" class="ui circular icon button"><i
-                class="github icon"></i></a>
-        <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
-
-        <a href="#" class="ui qq circular icon button" data-content="250275079"
-           data-position="bottom center"><i class="qq icon"></i></a>
-
-        <div class="ui wechat-qr flowing popup transition hidden">
-          <img src="../../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt=""
-               class="ui rounded image" style="width: 110px">
-        </div>
-      </div>
-      <!-- 备案信息 -->
-      <div class="three wide column">
-        <h4 class="ui inverted header m-text-thin m-text-spaced ">备案信息</h4>
-        <div class="ui inverted link list">
-          <a class="item m-text-thin">
-            <img class="ui rounded image" style="width: 20px;height: 20px;"
-                 src="../../static/images/icp.png" th:src="@{/images/icp.png}"/>
-          </a>
-          <a class="item m-text-thin" href="http://www.beian.gov.cn/" target="_blank">
-            蜀ICP:xxxxxxxx
-          </a>
-        </div>
-      </div>
-
     </div>
-  </div>
 </footer>
 
 <th:block th:fragment="script">
@@ -151,7 +148,7 @@
 
   /** 异步请求获得音乐列表以及封面图片列表 */
   $.ajax({
-    url: 'media/music',
+    url: 'media',
     type: 'GET',
     success: function(resp){
       //传入列表
@@ -161,9 +158,9 @@
 
   /** 音乐列表处理需要","号分割的歌曲以及图片集等字符串，例子："xxx.mp3,xxx.mp3" */
   function musicList(musics,images) {
-    //字符串分割为数组
-    musics = musics.split(",");
-    images = images.split(",");
+    //字符串数组
+    musics = JSON.parse(musics);
+    images = JSON.parse(images);
     //截取‘作者-歌名’返回列表
     let artists = [];
     let names = [];

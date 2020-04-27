@@ -13,12 +13,13 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = "media.paths")
 public class MediaProperties {
-    /** 磁盘音乐目录win:‘F:\\xxx\\xxx’,lin:‘/xxx/xxx’ */
-    private String musicPath = "";
-    /** 磁盘图片目录win:‘F:\\xxx\\xxx’,lin:‘/xxx/xxx’ */
-    private String imagePath = "";
+    /** 磁盘音乐目录win:‘F:\\xxx\\xxx’,lin:‘/xxx/xxx’ 数组形式配置1为win，2为lin */
+    private String[] musicPath;
+    /** 磁盘图片目录win:‘F:\\xxx\\xxx’,lin:‘/xxx/xxx’ 数组形式配置1为win，2为lin */
+    private String[] imagePath;
 
-    public MediaProperties(String musicPath, String imagePath) {
+
+    public MediaProperties(String[] musicPath, String[] imagePath) {
         this.musicPath = musicPath;
         this.imagePath = imagePath;
     }
@@ -26,19 +27,19 @@ public class MediaProperties {
     public MediaProperties() {
     }
 
-    public String getMusicPath() {
+    public String[] getMusicPath() {
         return musicPath;
     }
 
-    public void setMusicPath(String musicPath) {
+    public void setMusicPath(String[] musicPath) {
         this.musicPath = musicPath;
     }
 
-    public String getImagePath() {
+    public String[] getImagePath() {
         return imagePath;
     }
 
-    public void setImagePath(String imagePath) {
+    public void setImagePath(String[] imagePath) {
         this.imagePath = imagePath;
     }
 

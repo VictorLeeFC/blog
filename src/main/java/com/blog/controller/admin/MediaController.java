@@ -2,8 +2,13 @@ package com.blog.controller.admin;
 
 import com.blog.config.MediaProperties;
 import com.blog.util.RedisKeyUtils;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.data.redis.core.BoundListOperations;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -13,7 +18,9 @@ import org.thymeleaf.util.StringUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -32,37 +39,54 @@ public class MediaController {
     private MediaProperties mediaProperties;
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
-
+    @Autowired
+    private static final ObjectMapper om = new ObjectMapper();
     /** /media/music */
 
-    @GetMapping("/media/music")
-    public ResponseEntity<Map<String,Object>> media(){
+    @GetMapping("/media")
+    public ResponseEntity<Map<String,String>> media(){
+
         //创建一个容器包装要传递的数据
-        Map<String,Object> resp = new HashMap<>();
+        Map<String,String> resp = new HashMap<>();
         //先从缓存中去看有没有数据
-        Boolean hasKey = this.stringRedisTemplate.hasKey(RedisKeyUtils.MEDIA_MUSIC);
+        boolean hasKey = this.stringRedisTemplate.hasKey(RedisKeyUtils.MEDIA_MUSIC);
         if (hasKey){
-            Map<Object, Object> cacheMap = this.stringRedisTemplate.opsForHash().entries(RedisKeyUtils.MEDIA_MUSIC);
-            if (cacheMap != null && !cacheMap.isEmpty()) {
-                cacheMap.forEach((k,v)-> resp.put(k.toString(),v));
-                return ResponseEntity.ok(resp);
+            Map<Object, Object> cache = this.stringRedisTemplate.opsForHash().entries(RedisKeyUtils.MEDIA_MUSIC);
+            if (cache != null && !cache.isEmpty()) {
+
+                cache.forEach((k,v)-> resp.put((String)k,(String)v));
+
+                if(!resp.isEmpty() && resp.size() > 0){
+                    return ResponseEntity.ok(resp);
+                }
+                this.stringRedisTemplate.delete(RedisKeyUtils.MEDIA_MUSIC);
             }
         }
         try {
             //System.out.println("-------1------controller调用读取磁盘文件方法------------");
+            String[] musics;
+            String[] images;
             //获得硬盘的文件
-            String musics = getHardDiskDriveFileNames(mediaProperties.getMusicPath());
-            String images = getHardDiskDriveFileNames(mediaProperties.getImagePath());
-            //判断一下
-            if(musics!=null && musics!=""){
-                resp.put("musics",musics);
+            //判断是哪个系统
+            boolean isWin = System.getProperty("os.name").toLowerCase().contains("win");
+            if (isWin){
+                musics = getHardDiskDriveFileNames(mediaProperties.getMusicPath()[0]);
+                images = getHardDiskDriveFileNames(mediaProperties.getImagePath()[0]);
+            }else{
+                musics = getHardDiskDriveFileNames(mediaProperties.getMusicPath()[1]);
+                images = getHardDiskDriveFileNames(mediaProperties.getImagePath()[1]);
             }
-            if(images!=null && images!=""){
-                resp.put("images",images);
+
+            //判断一下是不是媒体文件
+            if(musics[0].contains(".")){
+                resp.put("musics",om.writeValueAsString(musics));
+            }
+            if(images[0].contains(".")){
+                resp.put("images",om.writeValueAsString(images));
             }
             if (resp!=null && !resp.isEmpty()) {
 
-                this.stringRedisTemplate.opsForHash().putAll(RedisKeyUtils.MEDIA_MUSIC, resp);
+                this.stringRedisTemplate.opsForHash().putAll(RedisKeyUtils.MEDIA_MUSIC,resp);
 
                 return ResponseEntity.ok(resp);
             }
@@ -81,30 +105,26 @@ public class MediaController {
      * @return 以,号间隔的文件名包含后缀的字符串。
      * @throws IOException
      */
-    private String getHardDiskDriveFileNames(String directory) throws IOException {
+    private String[] getHardDiskDriveFileNames(String directory) throws IOException {
         if (directory == null || directory == "") {
-            return null;
+            return new String[]{"路径不能为空"};
         }
         //实例化这个目录
         //System.out.println("---------2---------从这个路径读取：" + directory);
         File f = new File(directory);
         if(!f.isDirectory()){
-            return directory + "不是当前系统环境的目录!";
+            return new String[]{"传入的路径不是目录"};
         }
         //获得这个目录下所有的文件名
         String[] names = f.list();
         if (names==null || names.length==0){
             //System.out.println("------------------没有获取到文件");
-            return "该路径下没有文件";
+            return new String[]{"目录下没有文件"};
         }
         //字符数组拼接为,号间隔的字符串。
-        StringBuilder sb = new StringBuilder();
-        for (String name : names) {
-            sb.append(name);
-            sb.append(",");
-        }
+
         //System.out.println("---------3---------读取磁盘文件所有流程已经走通");
-        return StringUtils.substring(sb.toString(), 0, sb.toString().length() - 1);
+        return names;
     }
 
 }

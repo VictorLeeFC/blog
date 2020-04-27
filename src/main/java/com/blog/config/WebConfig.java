@@ -44,7 +44,7 @@ public class WebConfig implements WebMvcConfigurer {
                 //除了下面这些全部都要拦截
                 .excludePathPatterns("/","/admin","/admin/login","/admin/logout",
                         "/css/**", "/js/**","/webjars/**","/img/**","/asserts/**",
-                        "/admin/media/music");
+                        "/admin/media/**");
     }
 
     /**
@@ -53,6 +53,7 @@ public class WebConfig implements WebMvcConfigurer {
      */
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        //所有静态资源映射到static目录下,静态时../static/js/..运行时格式是：/js/..
         registry.addResourceHandler("/**")
                 .addResourceLocations("classpath:/static/");
         //判断是什么操作系统
@@ -61,19 +62,19 @@ public class WebConfig implements WebMvcConfigurer {
         if(isWin) {
             //win
             registry.addResourceHandler("/admin/media/music/**")
-                    .addResourceLocations("file:" + mediaProperties.getMusicPath() + "\\");
+                    .addResourceLocations("file:" + mediaProperties.getMusicPath()[0] + "\\");
 
             registry.addResourceHandler("/admin/media/image/**")
-                    .addResourceLocations("file:" + mediaProperties.getImagePath() + "\\");
+                    .addResourceLocations("file:" + mediaProperties.getImagePath()[0] + "\\");
 
         //这个else不要的话需要:return;不然就是两个系统的路径同时存在
         }else {
             //linux
             registry.addResourceHandler("/admin/media/music/**")
-                    .addResourceLocations("file:" + mediaProperties.getMusicPath());
+                    .addResourceLocations("file:" + mediaProperties.getMusicPath()[1]);
 
             registry.addResourceHandler("/admin/media/image/**")
-                    .addResourceLocations("file:" + mediaProperties.getImagePath());
+                    .addResourceLocations("file:" + mediaProperties.getImagePath()[1]);
         }
     }
 
