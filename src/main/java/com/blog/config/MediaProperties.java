@@ -3,8 +3,7 @@ package com.blog.config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * 磁盘媒体文件目录格式;win:‘F:\\xxx\\xxx’,lin:‘/xxx/xxx’
- * @description: none
+ * @description: 磁盘媒体文件目录格式;win:‘F:\\xxx\\xxx’,lin:‘/xxx/xxx’
  * @git: https://github.com/VictorLeeFC
  * @date: 2020/4/21 0:30
  * @author: li
