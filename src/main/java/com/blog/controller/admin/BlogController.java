@@ -9,6 +9,10 @@ import com.blog.service.TypeService;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +29,7 @@ import java.util.List;
  * @author: li
  * @version: v0.1
  */
+@Api(value = "博客页面相关")
 @Controller
 @RequestMapping(value = "/admin")
 public class BlogController {
@@ -43,6 +48,11 @@ public class BlogController {
     @Autowired
     private TagService tagService;
 
+    @ApiOperation(value = "获取全部博文", notes = "全部博文", httpMethod = "POST")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name="model", value = "对象模型", required = true, dataType = "Model"),
+            @ApiImplicitParam(name="page", value = "页面",required = true, defaultValue = "1", dataType = "String")
+    })
     @GetMapping("blogs")
     public String blogs(Model model, @RequestParam(required = false, defaultValue = "1") String page) {
         PageHelper.startPage(Integer.parseInt(page), 8);
